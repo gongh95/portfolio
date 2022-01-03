@@ -34,7 +34,7 @@ body {
     position: fixed;
     width: 4.4em;
     /* color: var(--third-clr); */
-    margin: 0 1.2em;
+    margin: 0 .7em;
     z-index: 2100;
 }
 .header .logo img {
@@ -45,7 +45,7 @@ body {
     position: fixed;
     width: 100%;
     height: 3em;
-    background: var(--primary-clr);
+    background: #E6ECF8;
 }
 .header .nav-bar__ul {
     position: fixed;
@@ -73,9 +73,9 @@ body {
 .main {
     position: absolute;
     width: 100%;
-    height: calc(100vh - 3em);
-    /* background-color: var(--bg-clr); */
-    background: url(./assets/img/fondo_sancle.jpg);
+    /* height: calc(100vh - 3em); */
+    background-color: #E6ECF8;
+    /* background: url(./assets/img/fondo_sancle.jpg); */
     background-size: 250%;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,7 +99,7 @@ body {
 .main .container-cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-evenly;
     gap: .6em;
 }
 .main .container-cards .card {
@@ -108,11 +108,11 @@ body {
     justify-content: space-evenly;
     align-items: center;
     max-width: 300px;
-    height: 450px;
-    background-color: var(--secondary-clr);
+    height: auto;
+    background-color: #b7a8a8;
     border-bottom-left-radius: 50px;
     border-top-right-radius: 50px;
-    box-shadow: 0px 0px 3px var(--secondary-clr);
+    box-shadow: 0px 0px 7px #b7a8a8;
     padding: 1.2em;
 }
 .main .container-cards .card .container-img {
@@ -121,13 +121,27 @@ body {
     border-radius: 50%;
     border: 2px solid rgba(0, 0, 0, 0.0);
     overflow: hidden;
+    margin-bottom: 1em;
 }
 .main .container-cards .card .container-img .img1 {
    width: 200px;
 }
+.main .container-cards .card .titulo-card {
+    font-size: 1.2em;
+    color: #352525;
+}
 .main .container-cards .card .subtitulo {
-    font: .96em;
+    font-size: 1.05em;
     font-weight: 600;
     text-align: center;
     padding: .7em 0;
+    color: #454545;
+}
+
+
+/* MEDIA QUERY */
+@media screen and (min-width: 768px) {
+    .header .nav-bar__ul {
+        display: flex;
+    }
 }
