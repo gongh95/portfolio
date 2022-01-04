@@ -96,6 +96,7 @@ body {
     text-align: center;
     padding-bottom: .9em;
     font-style: italic;
+    cursor: default;
 }
 .main .container-welcome .titulo-h4 {
     font-style: normal;
@@ -121,6 +122,7 @@ body {
 .main .card-section {
     position: relative;
     background-color: var(--section-clr);
+    padding-bottom: 30px;
 }
 .main .card-section .fondo-section {
     position: absolute;
@@ -152,6 +154,9 @@ body {
     padding: 1.2em;
 }
 .main .card-section .container-cards .card .container-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -159,14 +164,19 @@ body {
     overflow: hidden;
     margin-bottom: 1em;
 }
-.main .card-section .container-cards .card .container-img .img1 {
+.main .card-section .container-cards .card .container-img img {
    width: 200px;
 }
+.main .card-section .container-cards .card .container-img svg {
+    width: 132px;
+}
 .main .card-section .container-cards .card .titulo-card {
+    cursor: default;
     font-size: 1.2em;
     color: #352525;
 }
 .main .card-section .container-cards .card .subtitulo {
+    cursor: default;
     font-size: 1.05em;
     font-weight: 600;
     text-align: center;
