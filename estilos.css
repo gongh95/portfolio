@@ -143,6 +143,9 @@ body {
     justify-content: space-evenly;
     gap: .6em;
 }
+.main .card-section .container-cards h3 {
+    display: none;
+}
 .main .card-section .container-cards .card {
     display: flex;
     flex-direction: column;
@@ -179,6 +182,7 @@ body {
     top: 7px;
 }
 .main .card-section .container-cards .card .titulo-card {
+    text-align: center;
     cursor: default;
     font-size: 1.2em;
     color: #352525;
@@ -192,10 +196,23 @@ body {
     padding: .7em 0;
     color: #454545;
 }
+/* PORTFOLIO */
 .main .portfolio {
-    width: 100%;
-    height: auto;
     background-color: #3d6b8d;
+}
+.main .portfolio .container-portfolio {
+    position: relative;
+    max-width: 1125px;
+    margin: 0 auto;
+}
+
+.main .portfolio .container-portfolio h3 {
+    font-size: 2.9em;
+    cursor: default;
+    font-weight: 300;
+    color: var(--bg-clr);
+    text-align: center;
+    padding-bottom: 1em;
 }
 
 /* MEDIA QUERY */
@@ -210,15 +227,35 @@ body {
         font-size: 2.1em;   
     }
     .main .card-section .container-cards {
+        row-gap: 2.3em;
         top: 5px;
     }
+    .main .card-section .container-cards h3 {
+        display: block;
+        position: absolute;
+        font-size: 2.9em;
+        font-weight: 300;
+        color: var(--contrast-clr);
+        width: 200px;
+        margin-left: -53%;
+        top: -7%;
+        z-index: 1000;
+        cursor: default;
+    }
     .main .card-section .container-cards .card {
+        transition: transform .15s ease-in, background-color .15s ease-in, box-shadow .15s ease-in, background-color .15s ease-in;
         max-width: 300px;
+    }
+    .main .card-section .container-cards .card:hover {
+        background-color: #aa9a9a;
+        box-shadow: 0px 0px 8px #b7a8a8, 0px 0px 10px #b7a8a8, 0px 0px 12px #b7a8a8;
+        transform: scale(1.09);
     }
     .main .card-section .container-cards .card .container-img {
         width: 200px;
         height: 200px;
         margin-bottom: 1em;
+        transition: transform .1s ease-out;
     }
     .main .card-section .container-cards .card .container-img img {
         width: 200px;
@@ -230,5 +267,9 @@ body {
     }
     .main .card-section .container-cards .card .subtitulo {
         display: block;
+    }
+    .main .portfolio .container-portfolio h3 {
+        text-align: left;
+        margin-left: 18%;
     }
 }
