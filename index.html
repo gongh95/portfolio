@@ -19,10 +19,37 @@
         <div class="logo"><img src="./assets/img/logo_a.png" alt="logo" title="Atlantica Code"></div>
         <nav class="nav-bar">
             <ul class="nav-bar__ul">
-                <li class="nav-bar__li"><a href="#main">Inicio</a></li>
+                <li class="nav-bar__li"><a href="#">Inicio</a></li>
                 <li class="nav-bar__li"><a href="#card-section">Habilidades</a></li>
                 <li class="nav-bar__li"><a href="#portfolio">Portafolio</a></li>
                 <li class="nav-bar__li"><a href="#footer">Contacto</a></li>
+            </ul>
+        </nav>
+        <!-- NAV-RESPONSIVE IMPORTADO DE LANDING -->
+        <nav class="nav__resp">
+            <div class="boton-nav" id="abrir" onclick="mostrar()"><b></b></div>
+            <div class="boton-nav" id="cerrar" onclick="ocultar()"><b></b></div>
+            <script>
+                function mostrar() {
+                    document.getElementById("nav_container__resp").style.display = "flex";
+                    document.getElementById("nav_container__resp").style.marginTop = "3em";
+                    document.getElementById("abrir").style.display = "none";
+                    document.getElementById("cerrar").style.display = "block"
+                    document.getElementById("cerrar").className = "boton-nav active";
+                }
+                function ocultar() {
+                    document.getElementById("nav_container__resp").style.display = "flex";
+                    document.getElementById("nav_container__resp").style.marginTop = "-500px";
+                    document.getElementById("abrir").style.display = "block";
+                    document.getElementById("cerrar").className = "boton-nav";
+                    document.getElementById("cerrar").style.display = "none";
+                }
+            </script>
+            <ul class="nav-container__resp" id="nav_container__resp">
+                <li class="nav-item__resp"><a href="#" onclick="ocultar()">Inicio</a></li>
+                <li class="nav-item__resp"><a href="#card-section" onclick="ocultar()">Habilidades</a></li>
+                <li class="nav-item__resp"><a href="#portfolio" onclick="ocultar()">Portafolio</a></li>
+                <li class="nav-item__resp"><a href="#footer" onclick="ocultar()">Contacto</a></li>
             </ul>
         </nav>
     </header>

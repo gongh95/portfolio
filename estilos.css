@@ -42,7 +42,7 @@ body {
     width: 4.4em;
     /* color: var(--third-clr); */
     margin: 0 .7em;
-    z-index: 2100;
+    z-index: 2800;
 }
 .header .logo img {
     width: 100%;
@@ -75,6 +75,98 @@ body {
 }
 .header .nav-bar__ul .nav-bar__li:hover {
     transform: scale(1.2);
+}
+/* NAV-RESPONSIVE IMPORTADO DE LANDING */
+.header .nav__resp {
+    position: fixed;
+    width: 100%;
+    /* min-height: 65px; */
+    height: 3em;
+    /* background: #999; */
+    z-index: 2500;
+}
+.header .nav__resp .nav-container__resp {
+    position: relative;
+    display: flex;
+    height: 294px;
+    background-color: #C1D3F6;
+    margin-top: -500px;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    transition: margin-top .8s;
+    z-index: 2600;
+}
+.header .nav__resp .nav-container__resp .nav-item__resp {
+    width: 62%;
+    padding: 20px 0;
+    list-style-type: none;
+    text-align: center;
+    border-bottom: 2px solid #777;
+}
+.header .nav__resp .nav-container__resp .nav-item__resp > a {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #000639;
+    text-decoration: none;
+}
+.header .nav__resp #cerrar {
+    display: none;
+}
+.header .nav__resp .boton-nav {
+    position: fixed;
+    width: 41px;
+    height: 37px;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    z-index: 2700;
+}
+.header .nav__resp #abrir b {
+    position: absolute;
+    width: 34px;
+    height: 4px;
+    margin: 0 auto;
+    background-color: #0012a0;
+}
+.header .nav__resp #abrir b::before {
+    position: absolute;
+    content: "";
+    top: 13px;
+    width: 34px;
+    height: 4px;
+    background-color: #0012a0;
+}
+.header .nav__resp #abrir b::after {
+    position: absolute;
+    content: "";
+    top: 27px;
+    width: 34px;
+    height: 4px;
+    background-color: #0012a0;
+}
+
+.header .nav__resp .active b {
+    position: absolute;
+    transition: all 1s ease;
+}
+.header .nav__resp .active b::before {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 4px;
+    transform: rotate(45deg);
+    top: 13px;
+    background-color: #0012a0;
+}
+.header .nav__resp .active b::after {
+    position: absolute;
+    content: "";
+    width: 34px;
+    height: 4px;
+    top: 13px;
+    transform: rotate(-45deg);
+    background-color: #0012a0;
 }
 /* TITULO */
 .main {
@@ -222,6 +314,9 @@ body {
     }
     .header .nav-bar__ul {
         display: flex;
+    }
+    .header .nav__resp {
+        display: none;
     }
     .main .container-welcome .titulo-h3, .titulo-h4 {
         font-size: 2.1em;   
