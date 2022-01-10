@@ -88,6 +88,7 @@ body {
 .header .nav__resp .nav-container__resp {
     position: relative;
     display: flex;
+    width: 100%;
     height: 294px;
     background-color: #C1D3F6;
     margin-top: -500px;
@@ -181,7 +182,6 @@ body {
 }
 .main .container-welcome {
     width: 100%;
-    height: calc(100vh - 3em);
 }
 .main .container-welcome .titulo-h3, .titulo-h4 {
     font-family: 'Montserrat', sans-serif;
@@ -347,14 +347,30 @@ body {
             transform: translateY(0px);
         }
     }
+    @keyframes scaleMouse {
+        0%{
+            transform: scale(1);
+        }
+        50%{
+            transform: scale(1.15);
+        }
+        100%{
+            transform: scale(1);
+        }
+    }
     .main .container-mouse {
         position: absolute;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
         width: 100px;
         height: 200px;
         /* border: 2px solid #f00; */
         left: 16%;
         top: 45%;
         z-index: 3000;
+        animation: scaleMouse 6s infinite;
     }
     .main .container-mouse .container-mouse__texto {
         display: block;
@@ -373,12 +389,15 @@ body {
         width: 5px;
         height: 15px;
         background-color: rgba(41, 39, 39, 0.63);
-        left: 33px;
+        left: 47%;
         top: 44px;
         border-radius: 50px;
     }
     .main .container-mouse .container-flecha {
         animation: scroll 2s infinite;
+        left: 16%;
+        position: absolute;
+        bottom: 41%;
     }
     .main .container-mouse .container-flecha .flecha {
         position: absolute;
@@ -412,27 +431,25 @@ body {
     .main .container-welcome .container-ilustracion {
         margin: 143px auto;
     }
-    .main .container-welcome .container-ilustracion {
-        margin: 225px auto;
-    }
     .main .card-section .container-cards {
         row-gap: 2.3em;
-        top: 5px;
-        padding-top: 55px;
+        top: 51px;
+        padding-top: 95px;
     }
     .main .card-section .fondo-section {
         top: -317px;
         height: 321px;
     }
     .main .card-section .container-cards h3 {
+        font-family: 'Shizuru', cursive;
         display: block;
         position: absolute;
-        font-size: 2.9em;
+        font-size: 3.9em;
         font-weight: 300;
         color: var(--bg-clr);
         width: 200px;
         margin-left: -53%;
-        top: -1%;
+        top: -2%;
         z-index: 1000;
         cursor: default;
     }
@@ -463,11 +480,28 @@ body {
         display: block;
     }
     .main .portfolio .container-portfolio h3 {
+        font-family: 'Shizuru', cursive;
         text-align: left;
         margin-left: 18%;
+        font-size: 3.9em;
     }
     .main .contacto .container-contacto h3 {
+        font-family: 'Shizuru', cursive;
         text-align: left;
         margin-left: 18%;
+        font-size: 3.9em;
+    }
+}
+@media screen and (max-width: 880px) {
+    .main .container-mouse {
+        display: none;
+    }
+}
+@media screen and (min-width: 768px) and (min-height: 1368px) {
+    .main .container-welcome .container-ilustracion {
+        margin: 419px auto;
+    }
+    .main .container-mouse {
+        display: none;
     }
 }
