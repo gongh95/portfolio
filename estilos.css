@@ -176,6 +176,9 @@ body {
     background-color: #E6ECF8;
     padding-top: 3em;
 }
+.main .container-mouse .container-mouse__texto {
+    display: none;
+}
 .main .container-welcome {
     width: 100%;
 }
@@ -216,7 +219,7 @@ body {
 .main .card-section .fondo-section {
     position: absolute;
     width: 100%;
-    top: -148px;
+    top: -147px;
     height: 148px;
     background-color: var(--section-clr);
 }
@@ -332,22 +335,100 @@ body {
     .header .nav__resp {
         display: none;
     }
+    @keyframes scroll {
+        0%{
+            transform: translateY(0px);
+        }
+        50%{
+            transform: translateY(15px);
+        }
+        100%{
+            transform: translateY(0px);
+        }
+    }
+    .main .container-mouse {
+        position: absolute;
+        width: 100px;
+        height: 200px;
+        /* border: 2px solid #f00; */
+        left: 16%;
+        top: 45%;
+        z-index: 3000;
+    }
+    .main .container-mouse .container-mouse__texto {
+        display: block;
+        cursor: default;
+        color: rgba(41, 39, 39, 0.63);
+    }
+    .main .container-mouse .mouse {
+        width: 70px;
+        height: 103px;
+        border: 3px solid rgba(41, 39, 39, 0.63);
+        border-radius: 50px;
+    }
+    .main .container-mouse .mouse::before {
+        content: "";
+        position: absolute;
+        width: 5px;
+        height: 15px;
+        background-color: rgba(41, 39, 39, 0.63);
+        left: 33px;
+        top: 44px;
+        border-radius: 50px;
+    }
+    .main .container-mouse .container-flecha {
+        animation: scroll 2s infinite;
+    }
+    .main .container-mouse .container-flecha .flecha {
+        position: absolute;
+        color: rgba(41, 39, 39, 0.63);
+        width: 40px;
+        height: 40px;
+        border-left: 3px solid rgba(41, 39, 39, 0.63);
+        border-bottom: 3px solid rgba(41, 39, 39, 0.63);
+        transform: rotate(315deg);
+        left: 14px;
+        top: -13px;
+    }
+    .main .container-mouse .container-flecha .flecha::after {
+        content: "";
+        position: absolute;
+        color: rgba(41, 39, 39, 0.63);
+        width: 40px;
+        height: 40px;
+        border-left: 3px solid rgba(41, 39, 39, 0.63);
+        border-bottom: 3px solid rgba(41, 39, 39, 0.63);
+        left: -20px;
+        bottom: -20px;
+    }
+    .main .container-welcome {
+        height: calc(100vh - 3em);
+    }
     .main .container-welcome .titulo-h3, .titulo-h4 {
-        font-size: 2.1em;   
+        font-size: 2.1em;
+        padding-top: 48px;
+    }
+    .main .container-welcome .container-ilustracion {
+        margin: 143px auto;
     }
     .main .card-section .container-cards {
         row-gap: 2.3em;
         top: 5px;
+        padding-top: 55px;
+    }
+    .main .card-section .fondo-section {
+        top: -317px;
+        height: 321px;
     }
     .main .card-section .container-cards h3 {
         display: block;
         position: absolute;
         font-size: 2.9em;
         font-weight: 300;
-        color: var(--contrast-clr);
+        color: var(--bg-clr);
         width: 200px;
         margin-left: -53%;
-        top: -7%;
+        top: -1%;
         z-index: 1000;
         cursor: default;
     }
