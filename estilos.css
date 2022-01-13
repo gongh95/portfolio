@@ -5,16 +5,6 @@
 }
 /* IMPORTS */
 
-/* font-family: 'Shizuru', cursive; */
-@import url('https://fonts.googleapis.com/css2?family=Shizuru&display=swap');
-
-/* font-family: 'Inter', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&display=swap');
-
-/* font-family: 'Montserrat', sans-serif; */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,500;1,300&display=swap');
-
-
 :root {
     --primary-clr: #2F3A8F;
     --secondary-clr: #FE7E6D;
@@ -27,7 +17,7 @@ html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'interregular', arial;
     font-size: 16px;
 }
 /* HEADER */
@@ -71,6 +61,7 @@ body {
     text-decoration: none;
     color: var(--primary-clr);
     font-size: 1.3em;
+    font-weight: 600;
     padding: 0px 20px;
 }
 .header .nav-bar__ul .nav-bar__li:hover {
@@ -184,7 +175,7 @@ body {
     width: 100%;
 }
 .main .container-welcome .titulo-h3, .titulo-h4 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'montserratregular', sans-serif;
     font-size: 1.55em;
     text-align: center;
     font-style: italic;
@@ -370,7 +361,7 @@ body {
         left: 16%;
         top: 45%;
         z-index: 3000;
-        animation: scaleMouse 6s infinite;
+        /* animation: scaleMouse 6s infinite; */
     }
     .main .container-mouse .container-mouse__texto {
         display: block;
@@ -394,16 +385,16 @@ body {
         border-radius: 50px;
     }
     .main .container-mouse .container-flecha {
-        animation: scroll 2s infinite;
-        left: 16%;
+        animation: scroll 1s infinite;
+        left: 25%;
         position: absolute;
-        bottom: 41%;
+        bottom: 69%;
     }
     .main .container-mouse .container-flecha .flecha {
         position: absolute;
         color: rgba(41, 39, 39, 0.63);
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
         border-left: 3px solid rgba(41, 39, 39, 0.63);
         border-bottom: 3px solid rgba(41, 39, 39, 0.63);
         transform: rotate(315deg);
@@ -414,22 +405,29 @@ body {
         content: "";
         position: absolute;
         color: rgba(41, 39, 39, 0.63);
-        width: 40px;
-        height: 40px;
+        width: 20px;
+        height: 20px;
         border-left: 3px solid rgba(41, 39, 39, 0.63);
         border-bottom: 3px solid rgba(41, 39, 39, 0.63);
-        left: -20px;
-        bottom: -20px;
+        left: -14px;
+        bottom: -14px;
+    }
+    @keyframes animacionInicio {
+        0%{clip-path: inset(0 0 95% 0);}
+        100%{clip-path: inset(0 0 0 0);}
     }
     .main .container-welcome {
+        position: relative;
         height: calc(100vh - 3em);
+        z-index: 2600;
     }
     .main .container-welcome .titulo-h3, .titulo-h4 {
-        font-size: 2.1em;
-        padding-top: 48px;
+        font-size: 2.4em;
+        padding-top: 2.7em;
+        animation: animacionInicio 1.1s ease forwards;
     }
     .main .container-welcome .container-ilustracion {
-        margin: 143px auto;
+        margin: 95px auto;
     }
     .main .card-section .container-cards {
         row-gap: 2.3em;
@@ -441,7 +439,7 @@ body {
         height: 321px;
     }
     .main .card-section .container-cards h3 {
-        font-family: 'Shizuru', cursive;
+        font-family: 'shizururegular', cursive;
         display: block;
         position: absolute;
         font-size: 3.9em;
@@ -480,13 +478,13 @@ body {
         display: block;
     }
     .main .portfolio .container-portfolio h3 {
-        font-family: 'Shizuru', cursive;
+        font-family: 'shizururegular', cursive;
         text-align: left;
         margin-left: 18%;
         font-size: 3.9em;
     }
     .main .contacto .container-contacto h3 {
-        font-family: 'Shizuru', cursive;
+        font-family: 'shizururegular', cursive;
         text-align: left;
         margin-left: 18%;
         font-size: 3.9em;
